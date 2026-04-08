@@ -1,15 +1,15 @@
 FROM python:3.10-slim
-
 WORKDIR /app
 
-# Copy all files into the container
+# Install dependencies directly
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir pydantic openai fastapi uvicorn openenv-core
+
+# Copy all files
 COPY . .
 
-# Install the project and dependencies in editable mode or as a package
-RUN pip install --no-cache-dir .
-
-# Expose the mandatory Hugging Face port
+# EXPOSE the required port
 EXPOSE 7860
 
-# Run the server module using the python -m syntax
+# RUN the module directly without installing the package
 CMD ["python", "-m", "server.app"]
