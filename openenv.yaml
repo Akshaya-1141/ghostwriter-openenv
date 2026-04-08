@@ -1,0 +1,10 @@
+name: ghostwriter_pro
+version: 1.0.0
+description: "Professional tone alignment and brand voice editor."
+tasks:
+  - id: tone_easy
+    difficulty: easy
+  - id: tone_medium
+    difficulty: medium
+  - id: tone_hard
+    difficulty: hard
