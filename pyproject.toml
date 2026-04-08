@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build-meta"
+
+[project]
+name = "ghostwriter_pro"
+version = "1.0.0"
+description = "Professional tone alignment environment for OpenEnv"
+dependencies = [
+    "pydantic",
+    "openai",
+    "fastapi",
+    "uvicorn",
+    "openenv-core"
+]
+
+[tool.setuptools]
+packages = ["."]
