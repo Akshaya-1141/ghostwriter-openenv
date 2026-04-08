@@ -14,5 +14,9 @@ dependencies = [
     "openenv-core"
 ]
 
+[project.scripts]
+# This maps the command 'server' to the main function in server/app.py
+server = "server.app:main"
+
 [tool.setuptools]
-packages = ["."]
+packages = ["server"]
